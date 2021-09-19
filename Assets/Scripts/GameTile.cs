@@ -19,9 +19,15 @@ public class GameTile : MonoBehaviour
         _renderer = GetComponent<SpriteRenderer>();
     }
 
+    public void SetWinnerColor()
+    {
+        _renderer.color = Color.green;
+    }
+
     private void OnMouseDown()
     {
-        if (ownedByPlayer != Player.NONE) return;
+        if (ownedByPlayer != Player.NONE)
+            return;
         ownedByPlayer = _gameBoard.CurrentPlayer;
         
         if (_gameBoard.CurrentPlayer == Player.CROSS)
@@ -35,6 +41,14 @@ public class GameTile : MonoBehaviour
 
         Player winner = _gameBoard.CheckWin();
         Debug.Log($"Winner: {winner}");
-        _gameBoard.ChangePlayer();
+        
+        if (winner == Player.NONE)
+        {
+            _gameBoard.ChangePlayer();
+        }
+        else
+        {
+            _gameBoard.WeHaveAWinner();
+        }
     }
 }

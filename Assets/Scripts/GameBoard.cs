@@ -11,9 +11,7 @@ public enum Player
 
 public class GameBoard : MonoBehaviour
 {
-   
-
-    public Player CurrentPlayer;
+    public Player CurrentPlayer = Player.CROSS;
     public GameTile[] Tiles;
 
     public void ChangePlayer()
@@ -28,11 +26,29 @@ public class GameBoard : MonoBehaviour
         }
     }
 
+    public void WeHaveAWinner()
+    {
+        for (int i = 0; i < Tiles.Length; i++)
+        {
+            if (Tiles[i].ownedByPlayer == CurrentPlayer)
+            {
+                Tiles[i].SetWinnerColor();
+            }
+        }
+    }
+
     public Player CheckWin()
     {
         if(Win(0, 1, 2) != Player.NONE) return CurrentPlayer;
         if(Win(3, 4, 5) != Player.NONE) return CurrentPlayer;
         if(Win(6, 7, 8) != Player.NONE) return CurrentPlayer;
+        
+        if(Win(0, 3, 6) != Player.NONE) return CurrentPlayer;
+        if(Win(1, 4, 7) != Player.NONE) return CurrentPlayer;
+        if(Win(2, 5, 8) != Player.NONE) return CurrentPlayer;
+        
+        if(Win(0, 4, 8) != Player.NONE) return CurrentPlayer;
+        if (Win(2, 4, 6) != Player.NONE) return CurrentPlayer;
         return Player.NONE;
     }
 

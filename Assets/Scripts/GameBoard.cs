@@ -18,6 +18,7 @@ public class GameBoard : MonoBehaviour
     public GameTile[] Tiles;
     public bool IsGameFinished = false;
     public event Action<Player> OnPlayerChanged;
+    public event Action<Player> OnGameFinished;
     public void ChangePlayer()
     {
         if (CurrentPlayer == Player.CROSS)
@@ -43,6 +44,8 @@ public class GameBoard : MonoBehaviour
                 Tiles[i].SetWinnerColor();
             }
         }
+
+        OnGameFinished?.Invoke(CurrentPlayer);
     }
 
     public Player CheckWin()

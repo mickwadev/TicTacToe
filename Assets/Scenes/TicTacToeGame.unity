@@ -1270,7 +1270,7 @@ GameObject:
   - component: {fileID: 1497050299}
   - component: {fileID: 1497050298}
   m_Layer: 5
-  m_Name: Text
+  m_Name: GameStatusLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1370,6 +1370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentPlayerImage: {fileID: 1901559134}
+  GameStatusLabel: {fileID: 1497050298}
 --- !u!114 &1527322722
 MonoBehaviour:
   m_ObjectHideFlags: 0

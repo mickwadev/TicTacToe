@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43687a4ccd6fccc4bbec13988b5bbdfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentPlayer: 0
+  CurrentPlayer: 1
   Tiles:
   - {fileID: 211892182}
   - {fileID: 1801506945}

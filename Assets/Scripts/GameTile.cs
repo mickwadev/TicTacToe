@@ -17,6 +17,14 @@ public class GameTile : MonoBehaviour
         _renderer = GetComponent<SpriteRenderer>();
     }
 
+    private void Update()
+    {
+        if (IsWinningTile)
+        {
+            transform.localScale = Vector3.one * ( Mathf.Abs(Mathf.Sin(Time.time *2)) + 0.3f);
+        }
+    }
+
     public void SetWinnerColor()
     {
         _renderer.color = Color.green;

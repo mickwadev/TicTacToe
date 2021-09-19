@@ -30,7 +30,7 @@ public class GameBoard : MonoBehaviour
     {
         for (int i = 0; i < Tiles.Length; i++)
         {
-            if (Tiles[i].ownedByPlayer == CurrentPlayer)
+            if (Tiles[i].IsWinningTile)
             {
                 Tiles[i].SetWinnerColor();
             }
@@ -56,7 +56,12 @@ public class GameBoard : MonoBehaviour
     {
         if (Tiles[i1].ownedByPlayer == Tiles[i2].ownedByPlayer &&
             Tiles[i2].ownedByPlayer == Tiles[i3].ownedByPlayer && Tiles[i1].ownedByPlayer != Player.NONE)
+        {
+            Tiles[i1].IsWinningTile = true;
+            Tiles[i2].IsWinningTile = true;
+            Tiles[i3].IsWinningTile = true;
             return Tiles[i1].ownedByPlayer;
+        }
 
         return Player.NONE;
     }

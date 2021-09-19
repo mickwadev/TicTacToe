@@ -13,6 +13,7 @@ public class GameTile : MonoBehaviour
     private GameBoard _gameBoard;
 
     public Player ownedByPlayer = Player.NONE;
+    public bool IsWinningTile = false;
     private void Start()
     {
         _gameBoard = FindObjectOfType<GameBoard>();

@@ -11,8 +11,8 @@ public class GameTile : MonoBehaviour
 
     private SpriteRenderer _renderer;
     private GameBoard _gameBoard;
-     
-    private bool used = false;
+
+    public Player ownedByPlayer = Player.NONE;
     private void Start()
     {
         _gameBoard = FindObjectOfType<GameBoard>();
@@ -21,10 +21,10 @@ public class GameTile : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (used) return;
-            used = true;
+        if (ownedByPlayer != Player.NONE) return;
+        ownedByPlayer = _gameBoard.CurrentPlayer;
         
-        if (_gameBoard.CurrentPlayer == GameBoard.Player.CROSS)
+        if (_gameBoard.CurrentPlayer == Player.CROSS)
         {
             _renderer.sprite = Cross;
         }
@@ -32,6 +32,9 @@ public class GameTile : MonoBehaviour
         {
             _renderer.sprite = Circle;
         }
+
+        Player winner = _gameBoard.CheckWin();
+        Debug.Log($"Winner: {winner}");
         _gameBoard.ChangePlayer();
     }
 }

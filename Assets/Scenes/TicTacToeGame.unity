@@ -196,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cross: {fileID: 21300000, guid: 4d1e0a7680e7e1249989266e1669db68, type: 3}
   Circle: {fileID: 21300000, guid: d7e0d3560a9f7b14da4f49afbe5da06e, type: 3}
+  ownedByPlayer: 0
 --- !u!212 &58724150
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -320,6 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cross: {fileID: 21300000, guid: 4d1e0a7680e7e1249989266e1669db68, type: 3}
   Circle: {fileID: 21300000, guid: d7e0d3560a9f7b14da4f49afbe5da06e, type: 3}
+  ownedByPlayer: 0
 --- !u!212 &91565395
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -430,6 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cross: {fileID: 21300000, guid: 4d1e0a7680e7e1249989266e1669db68, type: 3}
   Circle: {fileID: 21300000, guid: d7e0d3560a9f7b14da4f49afbe5da06e, type: 3}
+  ownedByPlayer: 0
 --- !u!212 &211892183
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -682,8 +685,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43687a4ccd6fccc4bbec13988b5bbdfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 0
-  Tiles: []
+  CurrentPlayer: 0
+  Tiles:
+  - {fileID: 211892182}
+  - {fileID: 1801506945}
+  - {fileID: 991988943}
+  - {fileID: 1546698249}
+  - {fileID: 91565394}
+  - {fileID: 58724149}
+  - {fileID: 983301598}
+  - {fileID: 937528524}
+  - {fileID: 985574668}
 --- !u!1 &937528521
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cross: {fileID: 21300000, guid: 4d1e0a7680e7e1249989266e1669db68, type: 3}
   Circle: {fileID: 21300000, guid: d7e0d3560a9f7b14da4f49afbe5da06e, type: 3}
+  ownedByPlayer: 0
 --- !u!212 &937528525
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -881,6 +894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cross: {fileID: 21300000, guid: 4d1e0a7680e7e1249989266e1669db68, type: 3}
   Circle: {fileID: 21300000, guid: d7e0d3560a9f7b14da4f49afbe5da06e, type: 3}
+  ownedByPlayer: 0
 --- !u!212 &983301599
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1005,6 +1019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cross: {fileID: 21300000, guid: 4d1e0a7680e7e1249989266e1669db68, type: 3}
   Circle: {fileID: 21300000, guid: d7e0d3560a9f7b14da4f49afbe5da06e, type: 3}
+  ownedByPlayer: 0
 --- !u!212 &985574669
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1129,6 +1144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cross: {fileID: 21300000, guid: 4d1e0a7680e7e1249989266e1669db68, type: 3}
   Circle: {fileID: 21300000, guid: d7e0d3560a9f7b14da4f49afbe5da06e, type: 3}
+  ownedByPlayer: 0
 --- !u!212 &991988944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1253,6 +1269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cross: {fileID: 21300000, guid: 4d1e0a7680e7e1249989266e1669db68, type: 3}
   Circle: {fileID: 21300000, guid: d7e0d3560a9f7b14da4f49afbe5da06e, type: 3}
+  ownedByPlayer: 0
 --- !u!212 &1546698250
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1377,6 +1394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cross: {fileID: 21300000, guid: 4d1e0a7680e7e1249989266e1669db68, type: 3}
   Circle: {fileID: 21300000, guid: d7e0d3560a9f7b14da4f49afbe5da06e, type: 3}
+  ownedByPlayer: 0
 --- !u!212 &1801506946
 SpriteRenderer:
   m_ObjectHideFlags: 0

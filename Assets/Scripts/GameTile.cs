@@ -27,6 +27,9 @@ public class GameTile : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if(_gameBoard.IsGameFinished == true)
+            return;
+
         if (ownedByPlayer != Player.NONE)
             return;
         ownedByPlayer = _gameBoard.CurrentPlayer;

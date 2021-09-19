@@ -13,7 +13,7 @@ public class GameBoard : MonoBehaviour
 {
     public Player CurrentPlayer = Player.CROSS;
     public GameTile[] Tiles;
-
+    public bool IsGameFinished = false;
     public void ChangePlayer()
     {
         if (CurrentPlayer == Player.CROSS)
@@ -28,6 +28,7 @@ public class GameBoard : MonoBehaviour
 
     public void WeHaveAWinner()
     {
+        IsGameFinished = true;
         for (int i = 0; i < Tiles.Length; i++)
         {
             if (Tiles[i].IsWinningTile)

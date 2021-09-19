@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class GameBoard : MonoBehaviour
 {
-    public enum CurrentPlayer
+    public enum Player
     {
         CROSS,
         CIRCLE
     }
 
-    public CurrentPlayer Player;
+    public Player CurrentPlayer;
+    public GameTile[] Tiles;
 
     public void ChangePlayer()
     {
-        if (Player == CurrentPlayer.CROSS)
+        if (CurrentPlayer == Player.CROSS)
         {
-            Player = CurrentPlayer.CIRCLE;
+            CurrentPlayer = Player.CIRCLE;
         }
         else
         {
-            Player = CurrentPlayer.CROSS;
+            CurrentPlayer = Player.CROSS;
         }
+    }
+
+    public Player CheckWin()
+    {
+        return Player.CROSS;
     }
 }

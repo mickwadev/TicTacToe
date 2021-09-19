@@ -11,6 +11,7 @@ public class GameTile : MonoBehaviour
 
     private SpriteRenderer _renderer;
     private GameBoard _gameBoard;
+     
     private bool used = false;
     private void Start()
     {
@@ -23,7 +24,7 @@ public class GameTile : MonoBehaviour
         if (used) return;
             used = true;
         
-        if (_gameBoard.Player == GameBoard.CurrentPlayer.CROSS)
+        if (_gameBoard.CurrentPlayer == GameBoard.Player.CROSS)
         {
             _renderer.sprite = Cross;
         }

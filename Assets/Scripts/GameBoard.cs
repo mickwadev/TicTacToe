@@ -14,6 +14,7 @@ public class GameBoard : MonoBehaviour
 {
     public Player CurrentPlayer = Player.CROSS;
     public Sprite CircleSprite,CrossSprite;
+    public Color WinningColor;
     
     public GameTile[] Tiles;
     public bool IsGameFinished = false;

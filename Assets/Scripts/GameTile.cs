@@ -27,7 +27,7 @@ public class GameTile : MonoBehaviour
 
     public void SetWinnerColor()
     {
-        _renderer.color = Color.green;
+        _renderer.color = _gameBoard.WinningColor;
     }
 
     private void OnMouseDown()

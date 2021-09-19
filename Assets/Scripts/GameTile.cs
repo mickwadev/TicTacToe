@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class GameTile : MonoBehaviour
 {
-    public Sprite Cross;
-    public Sprite Circle;
-
     private SpriteRenderer _renderer;
     private GameBoard _gameBoard;
 
@@ -36,11 +33,11 @@ public class GameTile : MonoBehaviour
         
         if (_gameBoard.CurrentPlayer == Player.CROSS)
         {
-            _renderer.sprite = Cross;
+            _renderer.sprite = _gameBoard.CrossSprite;
         }
         else
         {
-            _renderer.sprite = Circle;
+            _renderer.sprite = _gameBoard.CircleSprite;
         }
 
         Player winner = _gameBoard.CheckWin();

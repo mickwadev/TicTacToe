@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,8 +13,11 @@ public enum Player
 public class GameBoard : MonoBehaviour
 {
     public Player CurrentPlayer = Player.CROSS;
+    public Sprite CircleSprite,CrossSprite;
+    
     public GameTile[] Tiles;
     public bool IsGameFinished = false;
+    public event Action<Player> OnPlayerChanged;
     public void ChangePlayer()
     {
         if (CurrentPlayer == Player.CROSS)
@@ -24,6 +28,9 @@ public class GameBoard : MonoBehaviour
         {
             CurrentPlayer = Player.CROSS;
         }
+
+        if (OnPlayerChanged != null)
+            OnPlayerChanged(CurrentPlayer);
     }
 
     public void WeHaveAWinner()

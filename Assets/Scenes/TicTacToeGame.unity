@@ -751,6 +751,7 @@ MonoBehaviour:
   CurrentPlayer: 1
   CircleSprite: {fileID: 21300000, guid: d7e0d3560a9f7b14da4f49afbe5da06e, type: 3}
   CrossSprite: {fileID: 21300000, guid: 4d1e0a7680e7e1249989266e1669db68, type: 3}
+  WinningColor: {r: 0.045523323, g: 0.4545606, b: 0.8773585, a: 1}
   Tiles:
   - {fileID: 211892182}
   - {fileID: 1801506945}

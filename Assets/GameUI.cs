@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Packages.Rider.Editor.UnitTesting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,8 @@ public class GameUI : MonoBehaviour
         _gameBoard.OnPlayerChanged += OnPlayerChanged;
         _gameBoard.OnGameFinished += GameBoardOnOnGameFinished;
         OnPlayerChanged(_gameBoard.CurrentPlayer);
+        Debug.Log($"From package test: {TestScript.Add(2,2)}");
+        
     }
 
     private void GameBoardOnOnGameFinished(Player obj)

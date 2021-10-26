@@ -7,10 +7,10 @@ TextureImporter:
     second: FlappySprites_0
   - first:
       213: -6376367901664132178
-    second: FlappySprites_1
+    second: Pipe_Top
   - first:
       213: -8241154173328528301
-    second: FlappySprites_2
+    second: Pipe_Bottom
   - first:
       213: -258530379695387820
     second: FlappySprites_3
@@ -277,7 +277,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlappySprites_1
+      name: Pipe_Top
       rect:
         serializedVersion: 2
         x: 152
@@ -298,7 +298,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlappySprites_2
+      name: Pipe_Bottom
       rect:
         serializedVersion: 2
         x: 180

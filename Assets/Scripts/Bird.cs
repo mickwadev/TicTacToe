@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,5 +18,10 @@ public class Bird : MonoBehaviour
         {
             rigidbody2D.velocity = Vector2.up * FlappyForce;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log($"Hit Obstacle");
     }
 }

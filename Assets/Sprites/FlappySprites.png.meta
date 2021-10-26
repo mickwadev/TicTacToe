@@ -4,7 +4,7 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -5433028019280988155
-    second: FlappySprites_0
+    second: Background
   - first:
       213: -6376367901664132178
     second: Pipe_Top
@@ -13,10 +13,10 @@ TextureImporter:
     second: Pipe_Bottom
   - first:
       213: -258530379695387820
-    second: FlappySprites_3
+    second: Ground
   - first:
       213: -7969131692057484925
-    second: FlappySprites_5
+    second: Flappy Dead
   - first:
       213: 7297306808589062936
     second: FlappySprites_6
@@ -256,7 +256,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FlappySprites_0
+      name: Background
       rect:
         serializedVersion: 2
         x: 3
@@ -319,7 +319,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlappySprites_3
+      name: Ground
       rect:
         serializedVersion: 2
         x: 215
@@ -340,7 +340,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FlappySprites_5
+      name: Flappy Dead
       rect:
         serializedVersion: 2
         x: 386

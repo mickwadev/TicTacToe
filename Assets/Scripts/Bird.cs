@@ -23,6 +23,8 @@ public class Bird : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.name == "Punkt") return;
+        
         if (isAlive)
         {
             Debug.Log($"Hit Obstacle");
@@ -30,6 +32,14 @@ public class Bird : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = DeadFlappy;
             isAlive = false;
             rigidbody2D.velocity = Vector2.up * FlappyForce;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.name == "Punkt")
+        {
+            FindObjectOfType<GeneratorPrzeszkod>().DodajPunkt();
         }
     }
 }
